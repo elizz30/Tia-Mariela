@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tiro Ganador</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body style="background-color: rgb(165, 14, 31); color: white">
+    <form action="registrardatos.php" method="post">
+      <h2>Inicio de sesión</h2>
+      <br />
+      <fieldset>
+        <legend>Datos de la cuenta</legend>
+        Usuario:
+        <input type="text" name="usuario" />
+        <br />
+        <br />
+        Contraseña:
+        <input type="password" name="contra" maxlength="16" minlength="4" />
+        <br />
+        <br />
+
+        ¿Mantener sesión abierta? <br />
+        <input type="radio" name="respuesta" value="1" /> Sí
+        <input type="radio" name="respuesta" value="2" /> No
+        <input type="radio" name="respuesta" value="3" disabled /> Más tarde
+        <br />
+        <br />
+      </fieldset> 
+      <br>
+      <button type="submit"><a href="actividad2_3.html">Iniciar</a></button>
+    </form>
+  </body>
+</html>
