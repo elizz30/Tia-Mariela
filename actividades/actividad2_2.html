@@ -6,28 +6,88 @@
   </head>
   <body style="background-color: rgb(165, 14, 31); color: white">
     <form action="registrardatos.php" method="post">
-      <h2>Inicio de sesión</h2>
+      <input type="hidden" name="hora" value="2023-10-01T12:00:00" />
+      <h2>Registrar Cuenta</h2>
+      <p>
+        Para que empieces a jugar, es necesario que registres una cuenta.
+        <br />
+        Llena los siguientes datos para poder iniciar sesión y disfrutar de la
+        experiencia.
+      </p>
+      <br />
       <br />
       <fieldset>
-        <legend>Datos de la cuenta</legend>
+        <legend>Datos requeridos</legend>
+        Nombre completo:
+        <input type="text" name="Nombre completo" />
+        <br />
+        <br />
         Usuario:
-        <input type="text" name="usuario" />
+        <input type="text" name="usuario" size="30" />
         <br />
         <br />
         Contraseña:
-        <input type="password" name="contra" maxlength="16" minlength="4" />
+        <input
+          type="password"
+          name="contra"
+          maxlength="16"
+          minlength="4"
+          size="27"
+        />
+        <br />
+        <br />
+        Seleccione su país de nacimiento:
+        <br />
+        <select>
+          <option value="0">Argentina</option>
+          <option value="1">Brasil</option>
+          <option value="2">Chile</option>
+          <option value="3">Colombia</option>
+          <option value="4">Costa Rica</option>
+          <option value="5">España</option>
+        </select>
+        <br />
+        <br />
+        Desea subir alguna foto de perfil?
+        <br />
+        <input type="file" name="foto_perfil" />
+
+        <br />
+        <br />
+        Agregue una breve descripción que le gustaría que los demás usuarios
+        vean en su perfil:
+        <br />
+        <textarea
+          name="descripcion_perfil"
+          rows="5"
+          cols="75"
+          maxlength="100"
+          placeholder="Descripción:"
+        >
+        </textarea>
+        <br />
+        <button type="button">Guardar</button>
+        <!-- Este botón no envía el formulario -->
+        <button type="reset">Borrar</button>
         <br />
         <br />
 
-        ¿Mantener sesión abierta? <br />
-        <input type="radio" name="respuesta" value="1" /> Sí
-        <input type="radio" name="respuesta" value="2" /> No
-        <input type="radio" name="respuesta" value="3" disabled /> Más tarde
+        Está de acuerdo con las políticas de privacidad?
+        <br />Marque las casillas con las que esté de acuerdo.
         <br />
         <br />
-      </fieldset> 
-      <br>
-      <button type="submit"><a href="actividad2_3.html">Iniciar</a></button>
+        <input type="checkbox" name="respuesta" value="1" /> Política de
+        Privacidad General <br />
+        <input type="checkbox" name="respuesta" value="2" /> Política de
+        Privacidad para Páginas Web <br />
+        <input type="checkbox" name="respuesta" value="3" /> Política de Cookies
+        <br />
+        <br />
+      </fieldset>
+      <br />
+      <button type="submit">
+        <a href="actividad2_3.html">Crear Cuenta</a>
+      </button>
     </form>
   </body>
 </html>
